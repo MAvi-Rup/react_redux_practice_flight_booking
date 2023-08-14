@@ -6,7 +6,7 @@ const nextBookingId = (bookings)=>{
     return maxId+1;
 }
 
-function reducer (state=initialState,action){
+function bookingsReducer (state=initialState,action){
     switch (action.type){
         case ADD_BOOKING:
             return [...state, {id:nextBookingId(state),...action.payload}];
@@ -18,4 +18,4 @@ function reducer (state=initialState,action){
     }
 };
 
-export default reducer;
+export default bookingsReducer;
